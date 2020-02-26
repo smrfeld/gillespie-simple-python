@@ -9,17 +9,17 @@ class Counts:
 
     def set_count(self, species, count):
         if not species in self._counts:
-            self._counts[species] = count
+            self._counts[species] = int(count)
         else:
-            self._counts[species] = count
+            self._counts[species] = int(count)
 
         assert self._counts[species] >= 0
 
     def increment_count(self, species, increment):
         if not species in self._counts:
-            self._counts[species] = increment
+            self._counts[species] = int(increment)
         else:
-            self._counts[species] += increment
+            self._counts[species] += int(increment)
 
         assert self._counts[species] >= 0
 
